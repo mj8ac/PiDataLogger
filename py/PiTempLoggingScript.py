@@ -15,6 +15,8 @@ cgitb.enable()
 print "Content-type: text/html\n"
 print " "
 
+# testing branching
+
 lastTemperature = [0,0,0,0,0,0,0,0]
 jsonTempList = [[],[],[],[],[],[],[],[]]
 jsonTempDict = [[],[],[],[],[],[],[],[]]
