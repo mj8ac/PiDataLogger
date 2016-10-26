@@ -15,14 +15,14 @@ cgitb.enable()
 print "Content-type: text/html\n"
 print " "
 
-<<<<<<< HEAD
 # testing branching
+# this is change made from github.com
 
 lastTemperature = [0,0,0,0,0,0,0,0]
 jsonTempList = [[],[],[],[],[],[],[],[]]
 jsonTempDict = [[],[],[],[],[],[],[],[]]
 globalTempReadings = []
-=======
+
 # Initialise the arrays to store the temperature data
 lastTemperature 	= [0,0,0,0,0,0,0,0]		# Stores the last known temperature to allow for error correction
 jsonTempList 		= [[],[],[],[],[],[],[],[]]	# Stores the current temperature reading & time for the duration of the session
