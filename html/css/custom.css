@@ -1,0 +1,60 @@
+/* Custom style sheet for Pi Temp Data logger
+Written by Tim Carter and Jonny Mirza */
+
+article {
+	display:inline-block;
+}
+
+article.first {
+	display:inline-block;
+/*	background: lime;*/
+	color:	black;
+/*	overflow: hidden;*/
+    width: 100%;
+}
+
+
+body {
+	height: 100%;
+	text-align: center;
+}
+
+li {
+	list-style: none;
+}
+
+nav {
+	text-align: left;
+}
+
+.center {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.content {
+	padding-top: 20px;
+	top: 0;
+}
+
+.sidebar {
+	display:inline-block;
+    background:green;
+	padding-top: 20px;
+}
+
+@media (min-width: 768px) {	
+.content {
+	padding-top: 20px;
+	top: 0;
+}
+
+.sidebar {
+    background:green;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    list-style: none;
+}
+}
