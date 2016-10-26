@@ -15,13 +15,22 @@ cgitb.enable()
 print "Content-type: text/html\n"
 print " "
 
+<<<<<<< HEAD
 # testing branching
 
 lastTemperature = [0,0,0,0,0,0,0,0]
 jsonTempList = [[],[],[],[],[],[],[],[]]
 jsonTempDict = [[],[],[],[],[],[],[],[]]
 globalTempReadings = []
+=======
+# Initialise the arrays to store the temperature data
+lastTemperature 	= [0,0,0,0,0,0,0,0]		# Stores the last known temperature to allow for error correction
+jsonTempList 		= [[],[],[],[],[],[],[],[]]	# Stores the current temperature reading & time for the duration of the session
+jsonTempDict 		= [[],[],[],[],[],[],[],[]]	# Stores the channel name and data from the jsonTempList
+globalTempReadings 	= []				# Stores the latest temperature readings
+>>>>>>> e124f5ec46a2240d233f5877f749afdf3da64059
 
+# Works out the file names associated with each temperature channel
 def getProbeAssignment():
 	files = os.listdir("/sys/bus/w1/devices")
 	files.remove("w1_bus_master1")
@@ -36,6 +45,7 @@ def getProbeAssignment():
 		
 	return probeList		
 
+# Reads the current temperatures reported by MAX31850 and returns an array of temperatures
 def getProbeTemperatures(probeList):
 	tempReadings = []
 	global lastTemperature
@@ -60,6 +70,7 @@ def getProbeTemperatures(probeList):
 	
 	return tempReadings		
 
+# Worker function that continuously reads temperatures and updates the global variable in its own thread
 def getTemperatures(probeList):
 	global globalTempReadings
 	
@@ -68,6 +79,7 @@ def getTemperatures(probeList):
 		createRealTimeChartFiles(globalTempReadings)
 		print(globalTempReadings)
 
+# Called from the getTemperatures() 
 def createRealTimeChartFiles(tempReadings):
 	for number in range(8):
 	# create the real time chart files
@@ -76,7 +88,7 @@ def createRealTimeChartFiles(tempReadings):
 			datafile.write(str(tempReadings[number]))
 			datafile.truncate()	
 
-		
+# Creates the historical charts of the entire session		
 def createChartFiles(tempReadings):
 	global jsonTempList
 	global jsonTempDict
@@ -94,7 +106,8 @@ def createChartFiles(tempReadings):
 		jsonTempDict[number]={"label":"T" + str(number+1) , "data":jsonTempList[number]}
 		with open("/var/www/PizzaOven/t"+str(number+1)+"LogChartData.json", "w") as LogChartFile:
 			json.dump(jsonTempDict[number], LogChartFile)
-	
+
+# Not sure why this is still here	
 def writeToSysLog():
 	while (True):
 		sys.stderr.write("Log from PizzaTempLogger thread")
