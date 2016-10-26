@@ -17,6 +17,7 @@ print " "
 
 # testing branching
 # this is change made from github.com
+# this is a change made from my local copy
 
 lastTemperature = [0,0,0,0,0,0,0,0]
 jsonTempList = [[],[],[],[],[],[],[],[]]
