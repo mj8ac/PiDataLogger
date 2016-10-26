@@ -172,4 +172,3 @@ thread.exit()
 with open("/var/www/debugLogFile.txt", "a") as debugFile:
 		debugFile.write("foodTemp > targetFoodTemp\n Leaving sys log thread\n")
 		
-#Additional comments here!! feel free to reject this addition if you want, it's only being added as a test commit.
