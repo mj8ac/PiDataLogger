@@ -69,7 +69,7 @@
 			</li><br/>
 		<!-- insert diskspace redout -->
 			<li>
-				Disk Space:<br/>	<input type="text" name="disk" value="100%" size="10" disabled />
+				Disk Space:<br/>	<input type="text" name="disk" value="000%" size="10" disabled />
 			</li><br/>
 			<li>
 				Part Number:<br/>	<input type="text" name="pn" value="000000" size="10" disabled />
@@ -134,7 +134,17 @@
 			</div>
 		</div>
 		<div class="box-content">
-			<div id="realtimechart" style="height:190px;"></div>
+			<div class="col-xsm-12 col-sm-9 col-md-10 col-lg-10" id="realtimechart1"></div>
+			<table id="rtc1" class="col-xsm-12 col-sm-3 col-md-2 col-lg-2"> Channels to display  <br/>
+				<input type="checkbox" name="chselect" value="t1" checked="checked"/> T1	<br/>
+				<input type="checkbox" name="chselect" value="t2" checked="checked"/> T2	<br/>
+				<input type="checkbox" name="chselect" value="t3" checked="checked"/> T3	<br/>
+				<input type="checkbox" name="chselect" value="t4" checked="checked"/> T4	<br/>
+				<input type="checkbox" name="chselect" value="t5" checked="checked"/> T5	<br/>
+				<input type="checkbox" name="chselect" value="t6" checked="checked"/> T6	<br/>
+				<input type="checkbox" name="chselect" value="t7" checked="checked"/> T7	<br/>
+				<input type="checkbox" name="chselect" value="t8" checked="checked"/> T8	<br/>
+			</table>
 			
 			<!-- what's this do, is it needed - the sample rate will be set in the setup page -->
 <!--			<p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
@@ -154,8 +164,17 @@
 					<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 				</div>
 		</div>
-		<div class="box-content">
-			 <div id="realtimechart2" style="height:190px;"></div>
+			<div class="col-xsm-12 col-sm-9 col-md-10 col-lg-10" id="realtimechart2"></div>
+			<table id="rtc2" class="col-xsm-12 col-sm-3 col-md-2 col-lg-2"> Channels to display<br/>
+				<input type="checkbox" name="chselect" value="t1" checked="checked"/> T1	<br/>
+				<input type="checkbox" name="chselect" value="t2" checked="checked"/> T2	<br/>
+				<input type="checkbox" name="chselect" value="t3" checked="checked"/> T3	<br/>
+				<input type="checkbox" name="chselect" value="t4" checked="checked"/> T4	<br/>
+				<input type="checkbox" name="chselect" value="t5" checked="checked"/> T5	<br/>
+				<input type="checkbox" name="chselect" value="t6" checked="checked"/> T6	<br/>
+				<input type="checkbox" name="chselect" value="t7" checked="checked"/> T7	<br/>
+				<input type="checkbox" name="chselect" value="t8" checked="checked"/> T8	<br/>
+			</table>
 		</div>
 	</article>
 

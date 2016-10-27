@@ -58,6 +58,8 @@ ul {
 	padding-top: 20px;
 	padding-bottom: 20px;
     list-style: none;
+	margin-top:10px;
+	margin-left:2px;
 }
 
 #graph1 {
@@ -70,4 +72,12 @@ ul {
 	background: lightcoral;
 	color:	black;
     width: 100%;
+}
+
+#realtimechart1 {
+	height:190px;
+}
+
+#realtimechart2 {
+	height:190px;
 }
