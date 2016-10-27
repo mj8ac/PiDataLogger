@@ -3,20 +3,29 @@ Written by Tim Carter and Jonny Mirza */
 
 article {
 	display:inline-block;
+	
 }
 
 article.first {
-	display:inline-block;
-/*	background: lime;*/
+	background: lime;
 	color:	black;
 /*	overflow: hidden;*/
     width: 100%;
 }
 
 
+
+
 body {
 	height: 100%;
 	text-align: center;
+}
+
+hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-style: inset;
+    border-width: 1px;
 }
 
 li {
@@ -27,6 +36,10 @@ nav {
 	text-align: left;
 }
 
+ul {
+	padding: 5px 5px 5px 5px;
+}
+
 .center {
 	display: block;
     margin-left: auto;
@@ -35,26 +48,26 @@ nav {
 }
 
 .content {
+	display:relative;
 	padding-top: 20px;
-	top: 0;
 }
 
 .sidebar {
 	display:inline-block;
     background:green;
 	padding-top: 20px;
-}
-
-@media (min-width: 768px) {	
-.content {
-	padding-top: 20px;
-	top: 0;
-}
-
-.sidebar {
-    background:green;
-	padding-top: 20px;
 	padding-bottom: 20px;
     list-style: none;
 }
+
+#graph1 {
+	background: lightblue;
+	color:	black;
+    width: 100%;
+}
+
+#graph2 {
+	background: lightcoral;
+	color:	black;
+    width: 100%;
 }
