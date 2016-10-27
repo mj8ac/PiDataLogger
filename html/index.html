@@ -77,46 +77,53 @@
 			<li>
 				Serial Number:<br/>	<input type="text" name="sn" value="000000" size="10" disabled />
 			</li><br/>
+			<li>
+				Sample Rate:<br/>	<input type="text" name="srate" value="00:00:00" size="10" disabled />
+			</li><br/>
+			
 		</ul>
 		</form>
 	
 	<!-- Temp Data -->		
-	<form name="probeReadings" class="center"><h2> Current Temp </h2>
-		<ul class="content">
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t1" value="T1:" disabled />
-				<input type="text" name="t1value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t2" value="T2:" disabled />	
-				<input type="text" name="t2value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t3" value="T3:" disabled />	
-				<input type="text" name="t3value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t4" value="T4" disabled />	
-				<input type="text" name="t4value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t5" value="T5" disabled />	
-				<input type="text" name="t5value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t6" value="T6" disabled />	
-				<input type="text" name="t6value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t7" value="T7" disabled />	
-				<input type="text" name="t7value" value="N/A" disabled /><br/><br/>
-			</li>
-			<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
-				<input type="text" name="t8" value="T8" disabled />	
-				<input type="text" name="t8value" value="N/A" disabled /><br/><br/>
-			</li>
+		<form name="probeReadings" class="center">
+			<ul class="content">
+				<h2> Current Temp </h2>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t1" value="T1:" disabled />
+					<input type="text" name="t1value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t2" value="T2:" disabled />	
+					<input type="text" name="t2value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t3" value="T3:" disabled />	
+					<input type="text" name="t3value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t4" value="T4" disabled />	
+					<input type="text" name="t4value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t5" value="T5" disabled />	
+					<input type="text" name="t5value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t6" value="T6" disabled />	
+					<input type="text" name="t6value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t7" value="T7" disabled />	
+					<input type="text" name="t7value" value="N/A" disabled /><br/><br/>
+				</li>
+				<li class="col-xsm-6 col-sm-4 col-md-3 col-lg-3">
+					<input type="text" name="t8" value="T8" disabled />	
+					<input type="text" name="t8value" value="N/A" disabled /><br/><br/>
+				</li>
+			</ul>
 		</form>
 	</article>
+	<hr/>
 	<article id="graph1"><!-- This is the graph for the real time plotting, showing the last 15mins -->
 		<div class="box-header">
 			<h2 id="chartTitle"><i class="halflings-icon list-alt"></i><span class="break"></span>Current Temp Plot</h2>
@@ -130,12 +137,13 @@
 			<div id="realtimechart" style="height:190px;"></div>
 			
 			<!-- what's this do, is it needed - the sample rate will be set in the setup page -->
-			<p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
+<!--			<p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
 			<p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
-			<!-- end of what does this do comment!! -->
+-->			<!-- end of what does this do comment!! -->
 			
 		</div>
 	</article>			
+	<hr/>
 	
 	<article id="graph2">	<!-- This is the graph for the real time plotting, for the duration of the log -->	
 		<div class="box-header">
