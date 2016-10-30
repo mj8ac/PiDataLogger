@@ -25,13 +25,13 @@
 	<!-- end: Favicon -->
 	
 	<!-- Scripts -->
-	<script src="js/jquery-3.1.1.js"></script>
+<!--	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>  -->
+	<script type="text/javascript" src="js/readforms.js"></script>
 	
 	
 </head>
 
 <body>
-
 	<nav class="navbar">
 		<!-- start: Header -->
 	<div class="navbar">
@@ -59,27 +59,29 @@
 	</noscript>
 	<article class="first">
 	<!-- Status-->
-		<form name="piData">
+		<form name="piData" action="" method="POST"  >
 		<ul  class="col-xsm-12 col-sm-4 col-md-3 col-lg-3 sidebar">
 		<!-- insert current time readout -->
 		<h2> Status </h2>
 			<li>
-				Current Time:<br/><input type="text" name="time" value="00:00" size="10" disabled /> 
+				Current Time:<br/><input type="text" name="time" value="00:00" size="10"/> 
 			</li><br/>
 		<!-- insert diskspace redout -->
+			<li>
+				Serial Number:<br/>	<input type="text" id="sn" name="sn" value="000000" size="10"/>
+			</li><br/>
+			<li>
+				Sample Rate:<br/>	<input type="text" name="srate" value="00:00:00" size="10"/>
+			</li><br/>
+			<li>
+				<input type="submit" Value="Confirm" name="submit" onclick="getSerial()"/>
+			</li><br/>
 			<li>
 				Disk Space:<br/>	<input type="text" name="disk" value="000%" size="10" disabled />
 			</li><br/>
 			<li>
 				Part Number:<br/>	<input type="text" name="pn" value="000000" size="10" disabled />
-			</li><br/>
-			<li>
-				Serial Number:<br/>	<input type="text" name="sn" value="000000" size="10" disabled />
-			</li><br/>
-			<li>
-				Sample Rate:<br/>	<input type="text" name="srate" value="00:00:00" size="10" disabled />
-			</li><br/>
-			
+			</li><br/>			
 		</ul>
 		</form>
 	
@@ -203,7 +205,7 @@
 	</footer>
 	
 	<!-- start: JavaScript-->
-
+<!--
 		<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
@@ -260,6 +262,7 @@
 
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
+
 	
 </body>
 </html>
